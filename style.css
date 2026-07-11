@@ -1,1 +1,57 @@
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111827;
+    color:white;
+    text-align:center;
+}
 
+header{
+    background:#0f172a;
+    padding:20px;
+    font-size:28px;
+    color:#00ff99;
+    font-weight:bold;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#1f2937;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+input,select{
+    width:90%;
+    padding:12px;
+    margin:10px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button{
+    background:#00ff99;
+    color:black;
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00cc77;
+}
+
+#result{
+    margin-top:20px;
+    font-size:22px;
+    color:#00ff99;
+}
