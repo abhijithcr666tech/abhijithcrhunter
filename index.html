@@ -1,39 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Abhijith CR Hunter</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-background:#111827;
-color:white;
-font-family:Arial;
-text-align:center;
-padding:30px;
-}
+    <title>AI Nifty Option Analysis</title>
 
-h1{
-color:#00ff99;
-}
-
-.card{
-background:#1f2937;
-padding:20px;
-border-radius:15px;
-margin-top:20px;
-}
-
-button{
-background:#00ff99;
-color:black;
-padding:15px 25px;
-border:none;
-border-radius:10px;
-font-size:18px;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -42,15 +15,19 @@ font-size:18px;
 
 <div class="card">
 
-<h2>Welcome Abhijith</h2>
+<h2>NIFTY 50</h2>
 
-<p>Dream Project Started Successfully.</p>
+<h1 id="price">25150</h1>
 
-<p>Version 1.0</p>
+<p id="signal">BUY ✅</p>
 
-<button>Market Analysis</button>
+<button onclick="refreshData()">
+Refresh Market
+</button>
 
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
