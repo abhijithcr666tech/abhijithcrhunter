@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Powered Nifty Option Analysis</title>
 
-    <title>AI Nifty Option Analysis</title>
-
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>🚀 AI Powered Nifty Option Analysis</h1>
+<header>
+🚀 AI Powered Nifty Option Analysis
+</header>
+
+<div class="container">
 
 <div class="card">
 
-<h2>NIFTY 50</h2>
+<h2>Market Analysis</h2>
 
-<h1 id="price">25150</h1>
+<input type="number" id="price" placeholder="Enter NIFTY Price">
 
-<p id="signal">BUY ✅</p>
+<select id="signal">
+<option value="BUY">BUY</option>
+<option value="SELL">SELL</option>
+</select>
 
-<button onclick="refreshData()">
-Refresh Market
+<button onclick="analyzeMarket()">
+Analyze Market
 </button>
+
+<div id="result"></div>
+
+</div>
 
 </div>
 
