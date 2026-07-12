@@ -3,35 +3,205 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Powered Nifty Option Analysis</title>
+
+<title>ACH PRO TERMINAL</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header>
-🚀 AI Powered Nifty Option Analysis
+
+<div class="logo">
+
+🚀 ACH PRO TERMINAL
+
+</div>
+
+<div class="market-status">
+
+<span class="live-dot"></span>
+
+Market Live
+
+</div>
+
 </header>
 
 <div class="container">
 
+<!-- LEFT PANEL -->
+
+<div class="left-panel">
+
 <div class="card">
 
-<h2>Market Analysis</h2>
+<h2>Select Index</h2>
 
-<input type="number" id="price" placeholder="Enter NIFTY Price">
+<select id="indexSelect">
 
-<select id="signal">
-<option value="BUY">BUY</option>
-<option value="SELL">SELL</option>
+<option>NIFTY</option>
+
+<option>BANKNIFTY</option>
+
+<option>FINNIFTY</option>
+
+<option>MIDCPNIFTY</option>
+
+<option>SENSEX</option>
+
+<option>BANKEX</option>
+
 </select>
 
-<button onclick="analyzeMarket()">
-Analyze Market
+</div>
+
+<div class="card">
+
+<h2>Market Summary</h2>
+
+<p>Spot : <span id="spot">25180.00</span></p>
+
+<p>Trend : <span class="bull">Bullish</span></p>
+
+<p>ACH Score : 91%</p>
+
+<p>PCR : 0.94</p>
+
+<p>Max Pain : 25150</p>
+
+<p>Support : 25120</p>
+
+<p>Resistance : 25240</p>
+
+</div>
+
+<div class="card">
+
+<h2>Layers</h2>
+
+<label><input type="checkbox" checked> EMA 9</label><br>
+
+<label><input type="checkbox" checked> EMA 15</label><br>
+
+<label><input type="checkbox" checked> VWAP</label><br>
+
+<label><input type="checkbox" checked> Breakout</label><br>
+
+<label><input type="checkbox" checked> Targets</label><br>
+
+<label><input type="checkbox" checked> Support</label><br>
+
+<label><input type="checkbox" checked> Resistance</label><br>
+
+<label><input type="checkbox"> Pivot</label><br>
+
+<label><input type="checkbox"> Volume Profile</label><br>
+
+<label><input type="checkbox"> Order Blocks</label><br>
+
+<label><input type="checkbox"> Order Flow</label><br>
+
+<label><input type="checkbox"> AI Alerts</label>
+
+</div>
+
+</div>
+
+<!-- CENTER -->
+
+<div class="center-panel">
+
+<div class="chart-card">
+
+<h2>Live Chart</h2>
+
+<div class="chart-placeholder">
+
+📈
+
+Trading Chart
+
+<br><br>
+
+(TradingView will be connected)
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>AI Recommendation</h2>
+
+<h1 class="buy">
+
+BUY CE
+
+</h1>
+
+<p>Confidence : 91%</p>
+
+<p>Risk : LOW</p>
+
+<p>Reason : Strong Trend + VWAP + EMA + Volume</p>
+
+</div>
+
+</div>
+
+<!-- RIGHT PANEL -->
+
+<div class="right-panel">
+
+<div class="card">
+
+<h2>Strike Analysis</h2>
+
+<p>24450 CE</p>
+
+<p>Breakout : 62.50</p>
+
+<p>Stop Loss : 54.00</p>
+
+<p>Target 1 : 72.00</p>
+
+<p>Target 2 : 84.00</p>
+
+<p>Target 3 : 96.00</p>
+
+<p>Confidence : 92%</p>
+
+</div>
+
+<div class="card">
+
+<h2>Recent Alerts</h2>
+
+<p>🟢 EMA Cross</p>
+
+<p>🟡 Breakout</p>
+
+<p>🔵 Target 1 Hit</p>
+
+<p>🔴 Trend Change</p>
+
+</div>
+
+<div class="card">
+
+<button onclick="generateReport()">
+
+📄 Download TXT
+
 </button>
 
-<div id="result"></div>
+</div>
 
 </div>
 
@@ -40,4 +210,5 @@ Analyze Market
 <script src="script.js"></script>
 
 </body>
+
 </html>
