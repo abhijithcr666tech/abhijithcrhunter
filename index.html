@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ACH PRO TERMINAL</title>
+<title>ACH PRO TERMINAL v2</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 
 </head>
 
@@ -18,22 +19,16 @@
 <header>
 
 <div class="logo">
-
 🚀 ACH PRO TERMINAL
-
 </div>
 
-<div class="market-status">
-
-<span class="live-dot"></span>
-
-Market Live
-
+<div class="tagline">
+AI Powered Options Trading Terminal
 </div>
 
 </header>
 
-<div class="container">
+<div class="dashboard">
 
 <!-- LEFT PANEL -->
 
@@ -43,7 +38,7 @@ Market Live
 
 <h2>Select Index</h2>
 
-<select id="indexSelect">
+<select id="index">
 
 <option>NIFTY</option>
 
@@ -55,101 +50,41 @@ Market Live
 
 <option>SENSEX</option>
 
-<option>BANKEX</option>
-
 </select>
 
 </div>
 
 <div class="card">
 
-<h2>Market Summary</h2>
+<h2>Spot Price</h2>
 
-<p>Spot : <span id="spot">25180.00</span></p>
-
-<p>Trend : <span class="bull">Bullish</span></p>
-
-<p>ACH Score : 91%</p>
-
-<p>PCR : 0.94</p>
-
-<p>Max Pain : 25150</p>
-
-<p>Support : 25120</p>
-
-<p>Resistance : 25240</p>
+<h1 id="spotPrice">
+Loading...
+</h1>
 
 </div>
 
 <div class="card">
 
-<h2>Layers</h2>
+<h2>ATM Strike</h2>
 
-<label><input type="checkbox" checked> EMA 9</label><br>
-
-<label><input type="checkbox" checked> EMA 15</label><br>
-
-<label><input type="checkbox" checked> VWAP</label><br>
-
-<label><input type="checkbox" checked> Breakout</label><br>
-
-<label><input type="checkbox" checked> Targets</label><br>
-
-<label><input type="checkbox" checked> Support</label><br>
-
-<label><input type="checkbox" checked> Resistance</label><br>
-
-<label><input type="checkbox"> Pivot</label><br>
-
-<label><input type="checkbox"> Volume Profile</label><br>
-
-<label><input type="checkbox"> Order Blocks</label><br>
-
-<label><input type="checkbox"> Order Flow</label><br>
-
-<label><input type="checkbox"> AI Alerts</label>
+<h1 id="atmStrike">
+--
+</h1>
 
 </div>
 
 </div>
 
-<!-- CENTER -->
+<!-- CENTER PANEL -->
 
 <div class="center-panel">
 
-<div class="chart-card">
+<div class="card">
 
 <h2>Live Chart</h2>
 
-<div class="chart-placeholder">
-
-📈
-
-Trading Chart
-
-<br><br>
-
-(TradingView will be connected)
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>AI Recommendation</h2>
-
-<h1 class="buy">
-
-BUY CE
-
-</h1>
-
-<p>Confidence : 91%</p>
-
-<p>Risk : LOW</p>
-
-<p>Reason : Strong Trend + VWAP + EMA + Volume</p>
+<div id="tvchart"></div>
 
 </div>
 
@@ -161,60 +96,61 @@ BUY CE
 
 <div class="card">
 
-<h2>Strike Analysis</h2>
+<h2>AI Analysis</h2>
 
-<p>24450 CE</p>
+<p>Trend :
+<span id="trend">
+Waiting...
+</span></p>
 
-<p>Breakout : 62.50<script src="js/chart.js"></script>
-<script src="js/fyers.js"></script>
-<script src="js/dhan.js"></script>
-<script src="js/ai.js"></script>
-<script src="js/breakout.js"></script>
-<script src="js/volumeProfile.js"></script>
-<script src="js/alerts.js"></script></p>
+<p>Breakout :
+<span id="breakout">
+--
+</span></p>
 
-<p>Stop Loss : 54.00</p>
+<p>Stop Loss :
+<span id="sl">
+--
+</span></p>
 
-<p>Target 1 : 72.00</p>
+<p>Target 1 :
+<span id="t1">
+--
+</span></p>
 
-<p>Target 2 : 84.00</p>
+<p>Target 2 :
+<span id="t2">
+--
+</span></p>
 
-<p>Target 3 : 96.00</p>
+<p>Target 3 :
+<span id="t3">
+--
+</span></p>
 
-<p>Confidence : 92%</p>
+<p>
 
-</div>
+Confidence
 
-<div class="card">
+</p>
 
-<h2>Recent Alerts</h2>
+<div class="meter">
 
-<p>🟢 EMA Cross</p>
-
-<p>🟡 Breakout</p>
-
-<p>🔵 Target 1 Hit</p>
-
-<p>🔴 Trend Change</p>
-
-</div>
-
-<div class="card">
-
-<button onclick="generateReport()">
-
-📄 Download TXT
-
-</button>
+<div class="meter-fill"
+id="confidenceBar">
 
 </div>
 
 </div>
 
+<h3 id="confidenceText">
+
+0%
+
+</h3>
+
 </div>
 
-<script src="script.js"></script>
+</div>
 
-</body>
-
-</html>
+</div>
