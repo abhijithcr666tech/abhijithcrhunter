@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ACH PRO TERMINAL v2</title>
@@ -22,13 +23,17 @@
 🚀 ACH PRO TERMINAL
 </div>
 
-<div class="tagline">
-AI Powered Options Trading Terminal
+<div class="status">
+
+<span class="dot"></span>
+
+LIVE MARKET
+
 </div>
 
 </header>
 
-<div class="dashboard">
+<div class="main-container">
 
 <!-- LEFT PANEL -->
 
@@ -50,16 +55,20 @@ AI Powered Options Trading Terminal
 
 <option>SENSEX</option>
 
+<option>BANKEX</option>
+
 </select>
 
 </div>
 
 <div class="card">
 
-<h2>Spot Price</h2>
+<h2>Spot</h2>
 
 <h1 id="spotPrice">
+
 Loading...
+
 </h1>
 
 </div>
@@ -69,88 +78,59 @@ Loading...
 <h2>ATM Strike</h2>
 
 <h1 id="atmStrike">
+
 --
+
 </h1>
 
 </div>
 
-</div>
-
-<!-- CENTER PANEL -->
-
-<div class="center-panel">
-
 <div class="card">
 
-<h2>Live Chart</h2>
+<h2>AI Recommendation</h2>
 
-<div id="tvchart"></div>
+<h1 class="buy">
 
-</div>
+BUY CE
 
-</div>
-
-<!-- RIGHT PANEL -->
-
-<div class="right-panel">
-
-<div class="card">
-
-<h2>AI Analysis</h2>
-
-<p>Trend :
-<span id="trend">
-Waiting...
-</span></p>
-
-<p>Breakout :
-<span id="breakout">
---
-</span></p>
-
-<p>Stop Loss :
-<span id="sl">
---
-</span></p>
-
-<p>Target 1 :
-<span id="t1">
---
-</span></p>
-
-<p>Target 2 :
-<span id="t2">
---
-</span></p>
-
-<p>Target 3 :
-<span id="t3">
---
-</span></p>
+</h1>
 
 <p>
 
 Confidence
 
+<span id="confidence">
+
+91%
+
+</span>
+
 </p>
 
-<div class="meter">
+<p>
 
-<div class="meter-fill"
-id="confidenceBar">
+Trend
 
-</div>
+<span id="trend">
 
-</div>
+Bullish
 
-<h3 id="confidenceText">
+</span>
 
-0%
-
-</h3>
+</p>
 
 </div>
 
 </div>
+
+<!-- CENTER -->
+
+<div class="center-panel">
+
+<div class="chart-card">
+
+<h2>Live Chart</h2>
+
+<div id="tvchart"></div>
 
 </div>
